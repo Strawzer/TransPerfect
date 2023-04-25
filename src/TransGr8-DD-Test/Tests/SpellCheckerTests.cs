@@ -1,4 +1,8 @@
 ﻿using NUnit.Framework;
+using System.Reflection;
+using TransGr8_DD_Test.Core;
+using TransGr8_DD_Test.Helpers;
+using TransGr8_DD_Test.Models;
 
 namespace TransGr8_DD_Test.Tests
 {
@@ -12,52 +16,18 @@ namespace TransGr8_DD_Test.Tests
 		private User user;
 
 		[SetUp]
-		public void Setup()
+		public async Task Setup()
 		{
+			// Load spells list from json file
+            string spellsPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data/Spells.json");
+            spells = await JsonFileReader.ReadAsync<List<Spell>>(spellsPath);
+			
+			// Load users list from json file
+            string usersPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Data/Users.json");
+            List<User> users = await JsonFileReader.ReadAsync<List<User>>(usersPath);
 
-			spells = new List<Spell>();
-			spells.Add(new Spell
-			{
-				Name = "Fireball",
-				Level = 3,
-				CastingTime = "1 action",
-				Components = "V, S, M (a tiny ball of bat guano and sulfur)",
-				Range = 150,
-				Duration = "Instantaneous",
-				SavingThrow = "Dexterity"
-			});
-			spells.Add(new Spell
-			{
-				Name = "Magic Missile",
-				Level = 1,
-				CastingTime = "1 action",
-				Components = "V, S",
-				Range = 120,
-				Duration = "Instantaneous",
-				SavingThrow = ""
-			});
-			spells.Add(new Spell
-			{
-				Name = "Cure Wounds",
-				Level = 1,
-				CastingTime = "1 action",
-				Components = "V, S",
-				Range = 1,
-				Duration = "Instantaneous",
-				SavingThrow = ""
-			});
-
-
-			// Create a new User object with default values for testing.
-			user = new User
-			{
-				Level = 3,
-				HasVerbalComponent = true,
-				HasSomaticComponent = true,
-				HasMaterialComponent = true,
-				Range = 200,
-				HasConcentration = true
-			};
+			// Get The first user for test
+			user = users.FirstOrDefault();
 		}
 
 		[Test]

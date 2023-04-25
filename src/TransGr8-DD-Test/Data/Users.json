@@ -1,0 +1,26 @@
+﻿[
+	{
+		"Level": 3,
+		"HasVerbalComponent": true,
+		"HasSomaticComponent": true,
+		"HasMaterialComponent": true,
+		"Range": 200,
+		"HasConcentration": true
+	},
+	{
+		"Level": 10,
+		"HasVerbalComponent": false,
+		"HasSomaticComponent": true,
+		"HasMaterialComponent": false,
+		"Range": 1,
+		"HasConcentration": true
+	},
+	{
+		"Level": 2,
+		"HasVerbalComponent": false,
+		"HasSomaticComponent": false,
+		"HasMaterialComponent": false,
+		"Range": 25,
+		"HasConcentration": true
+	}
+]

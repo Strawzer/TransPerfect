@@ -1,0 +1,56 @@
+[
+	{
+		"Name": "Fireball",
+		"Level": 3,
+		"CastingTime": "1 action",
+		"Components": "V, S, M (a tiny ball of bat guano and sulfur)",
+		"Range": 150,
+		"Duration": "Instantaneous",
+		"SavingThrow": "Dexterity"
+	},
+	{
+		"Name": "Magic Missile",
+		"Level": 1,
+		"CastingTime": "1 action",
+		"Components": "V, S",
+		"Range": 120,
+		"Duration": "Instantaneous",
+		"SavingThrow": ""
+	},
+	{
+		"Name": "Cure Wounds",
+		"Level": 1,
+		"CastingTime": "1 action",
+		"Components": "V, S",
+		"Range": 1,
+		"Duration": "Instantaneous",
+		"SavingThrow": ""
+	},
+	{
+		"Name": "Command",
+		"Level": 1,
+		"CastingTime": "1 action",
+		"Components": "V, S",
+		"Range": 1,
+		"Duration": "Instantaneous",
+		"SavingThrow": ""
+	},
+	{
+		"Name": "Identify",
+		"Level": 1,
+		"CastingTime": "1 action",
+		"Components": "V, S, M",
+		"Range": 1,
+		"Duration": "Instantaneous",
+		"SavingThrow": ""
+	},
+	{
+		"Name": "Hold Person",
+		"Level": 1,
+		"CastingTime": "1 action",
+		"Components": "V, S",
+		"Range": 1,
+		"Duration": "Concentration",
+		"SavingThrow": ""
+	}
+]
